@@ -264,7 +264,7 @@ export default function SignIn() {
           {/* Register Link */}
           <div className="text-center">
             <p className={`${currentTheme.subtext} text-xs sm:text-sm`}>
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <Link href="/auth/register" className={`${variant === 'purple' ? 'text-purple-400 hover:text-purple-300' : 'text-blue-400 hover:text-blue-300'} font-medium hover:underline transition-colors`}>
                 Create Account
               </Link>

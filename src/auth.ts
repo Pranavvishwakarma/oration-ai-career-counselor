@@ -72,7 +72,8 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile }) {
+    // Change unused parameters to:
+    async signIn({ user: _user, account: _account, profile: _profile }) {
       try {
         return true;
       } catch (error) {

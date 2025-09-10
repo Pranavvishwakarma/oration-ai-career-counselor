@@ -41,7 +41,7 @@ export default function ChatWindow({ chatId }: Props) {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
-        {messages?.map((message) => (
+        {messages?.map((message: { id: number; sender: string; content: string }) => (
           <ChatMessage
             key={message.id}
             sender={message.sender}
@@ -51,7 +51,7 @@ export default function ChatWindow({ chatId }: Props) {
         <div ref={messagesEndRef} />
       </div>
       <div className="p-4 border-t">
-        <ChatInput onSend={handleSendMessage} isLoading={addMessage.isLoading} />
+        <ChatInput onSend={handleSendMessage} isLoading={addMessage.isPending} />
       </div>
     </div>
   );

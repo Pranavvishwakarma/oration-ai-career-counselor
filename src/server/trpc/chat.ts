@@ -46,7 +46,7 @@ export const chatRouter = t.router({
       // Guest user के लिए database में entry create करें
       if (ctx.user.isGuest) {
         // Check if guest user already exists
-        let existingUser = await prisma.user.findUnique({
+        const existingUser = await prisma.user.findUnique({
           where: { id: ctx.user.id }
         });
   

@@ -65,7 +65,7 @@ export default function RegisterPage() {
         const data = await response.json();
         setError(data.error || 'Registration failed');
       }
-    } catch (error) {
+    } catch (_error) {
       setError('An error occurred during registration');
     } finally {
       setIsLoading(false);
