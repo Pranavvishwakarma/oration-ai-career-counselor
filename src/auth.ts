@@ -73,7 +73,12 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
-      return true;
+      try {
+        return true;
+      } catch (error) {
+        console.error('SignIn error:', error);
+        return false;
+      }
     },
     async jwt({ token, user, account }) {
       // JWT में user info store करें
@@ -98,6 +103,7 @@ export const { auth, handlers, signIn, signOut } = NextAuth({
   },
   pages: {
     signIn: "/auth/signin",
+    error: "/auth/error", // Add error page
   },
   debug: process.env.NODE_ENV === 'development',
   trustHost: true,
