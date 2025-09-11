@@ -9,7 +9,7 @@ const getBaseUrl = () => {
   }
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
   if (process.env.NODE_ENV === 'production') return 'https://oration-ai-career-counselor.vercel.app';
-  return 'http://localhost:3000';
+  return 'https://oration-ai-career-counselor.vercel.app';
 };
 
 export const trpc = createTRPCReact<AppRouter>();
