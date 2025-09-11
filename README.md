@@ -2,6 +2,18 @@
 
 A modern AI-powered career counseling chat application built with Next.js, tRPC, and OpenAI integration. This application provides personalized career guidance through an intelligent chatbot interface with user authentication and session management.
 
+Demo / Screenshots
+<img width="1918" height="867" alt="image" src="https://github.com/user-attachments/assets/3baa3d4a-1ea3-4d70-852a-a8c7c7dcbac8" />
+<img width="1918" height="860" alt="image" src="https://github.com/user-attachments/assets/6390e8d0-f907-47b1-915d-539cd5c3ae34" />
+Register
+<img width="1918" height="862" alt="image" src="https://github.com/user-attachments/assets/8481a4b7-0171-44f6-b03e-6cdc46bae638" />
+Login and Chat Interface
+<img width="1677" height="866" alt="image" src="https://github.com/user-attachments/assets/a3c7792b-54ae-47c8-a84f-bd42b0240988" />
+
+
+Demo Video
+
+Or you can embed a YouTube video instead:
 ## Features
 
 - 🤖 **AI-Powered Career Counseling**: Integrated with OpenAI GPT for intelligent career advice
