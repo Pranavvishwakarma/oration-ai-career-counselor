@@ -14,8 +14,7 @@ Login and Chat Interface
 
 Watch the OrationGuide AI Chat in action:
 
-[![OrationGuide AI Chat Demo](https://img.youtube.com/vi/l5d11rsa0k0/0.jpg)](https://youtu.be/l5d11rsa0k0)
-
+[![Watch the video](https://img.youtube.com/vi/l5d11rsa0k0/0.jpg)](https://youtu.be/l5d11rsa0k0)
 ## Features
 
 - 🤖 **AI-Powered Career Counseling**: Integrated with OpenAI GPT for intelligent career advice
