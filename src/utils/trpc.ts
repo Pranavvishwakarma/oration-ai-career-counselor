@@ -1,28 +1,21 @@
 import { createTRPCReact } from '@trpc/react-query';
-import type { AppRouter } from '@/server/trpc/router';
-import superjson from 'superjson';
 import { httpBatchLink } from '@trpc/client';
+import superjson from 'superjson';
+import type { AppRouter } from '@/server/trpc/router';
 
-function getBaseUrl() {
-  if (typeof window !== 'undefined') {
-    return ''; // Client side → /api/trpc relative
-  }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-  if (process.env.NEXT_PUBLIC_VERCEL_URL) { 
-    return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
-  }
-  return 'http://localhost:3000';
-}
+const getBaseUrl = () => {
+  if (typeof window !== 'undefined') return ''; // browser → relative
+  if (process.env.NEXT_PUBLIC_VERCEL_URL) return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`; // vercel
+  return 'http://localhost:3000'; // local
+};
 
 export const trpc = createTRPCReact<AppRouter>();
 
 export const trpcClient = trpc.createClient({
-  transformer: superjson,
   links: [
     httpBatchLink({
-      url: `${getBaseUrl()}/api/trpc`
+      url: `${getBaseUrl()}/api/trpc`,
+      transformer: superjson, // ✅ transformer ko yaha shift karna hai
     }),
   ],
 });
