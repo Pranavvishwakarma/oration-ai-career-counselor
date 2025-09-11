@@ -8,12 +8,18 @@ type Message = {
 };
 
 export const getCareerAdvice = async (prompt: string, chatHistory: Message[] = []) => {
+  // Map 'AI' role to 'assistant' for OpenAI API
+  const mappedHistory = chatHistory.map(msg => ({
+    role: msg.role.toLowerCase() === 'ai' ? 'assistant' : msg.role.toLowerCase(),
+    content: msg.content
+  }));
+
   const messages = [
     {
       role: "system",
       content: "You are a knowledgeable career counselor. Provide helpful, practical career advice based on the user's questions and situation. Be supportive and informative while maintaining professionalism.",
     },
-    ...chatHistory,
+    ...mappedHistory,
     { role: "user", content: prompt }
   ];
 
