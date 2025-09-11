@@ -10,10 +10,12 @@ Register
 Login and Chat Interface
 <img width="1677" height="866" alt="image" src="https://github.com/user-attachments/assets/a3c7792b-54ae-47c8-a84f-bd42b0240988" />
 
+## 🎥 Demo Video
 
-Demo Video
+Watch the OrationGuide AI Chat in action:
 
-Or you can embed a YouTube video instead:
+[![OrationGuide AI Chat Demo](https://img.youtube.com/vi/l5d11rsa0k0/0.jpg)](https://youtu.be/l5d11rsa0k0)
+
 ## Features
 
 - 🤖 **AI-Powered Career Counseling**: Integrated with OpenAI GPT for intelligent career advice
