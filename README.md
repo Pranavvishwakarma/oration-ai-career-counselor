@@ -179,13 +179,6 @@ npx tsc --noEmit
 npm run lint
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m 'Add amazing feature'`
-4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
 
 ## 📝 API Documentation
 
@@ -216,10 +209,6 @@ npm run lint
    - Check `DATABASE_URL` format
    - Run `npx prisma db push`
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [Next.js](https://nextjs.org/) for the amazing React framework
@@ -228,14 +217,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [OpenAI](https://openai.com/) for AI capabilities
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 
-## 📞 Support
-
-If you have any questions or need help, please:
-
-1. Check the [Issues](https://github.com/your-username/oration-ai-chat/issues) page
-2. Create a new issue if your problem isn't already reported
-3. Contact the development team
-
----
-
-**Built with ❤️ for better career guidance**
+**Thank You**
