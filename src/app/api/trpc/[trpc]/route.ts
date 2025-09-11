@@ -1,5 +1,5 @@
 import { fetchRequestHandler } from '@trpc/server/adapters/fetch';
-import { appRouter, createContext } from '@/server/trpc/index';
+import { appRouter, createContext } from '@/server/trpc/router';
 
 const handler = async (req: Request) => {
   try {
@@ -7,7 +7,7 @@ const handler = async (req: Request) => {
       endpoint: '/api/trpc',
       req,
       router: appRouter,
-      createContext: () => createContext(),
+      createContext: async () => await createContext(),
       onError: ({ error, path }) => {
         console.error(`TRPC Error on ${path}:`, error);
       },

@@ -4,7 +4,6 @@ import type { AppRouter } from '@/server/trpc/router';
 
 const getBaseUrl = () => {
   if (typeof window !== 'undefined') {
-    // Browser में current origin use करें
     return window.location.origin;
   }
   if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
@@ -18,6 +17,9 @@ export const trpcClient = trpc.createClient({
   links: [
     httpBatchLink({
       url: `${getBaseUrl()}/api/trpc`,
+      headers: () => ({
+        'Content-Type': 'application/json',
+      }),
     }),
   ],
 });
